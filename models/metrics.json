@@ -1,0 +1,55 @@
+{
+  "dataset_rows_raw": 235795,
+  "duplicates_removed": 425,
+  "dataset_rows_after_cleaning": 235370,
+  "train_rows": 188296,
+  "test_rows": 47074,
+  "phishing_rows": 100520,
+  "legitimate_rows": 134850,
+  "accuracy": 0.9964,
+  "precision": 0.9986,
+  "recall": 0.993,
+  "f1": 0.9958,
+  "confusion_matrix": [
+    [
+      26943,
+      27
+    ],
+    [
+      141,
+      19963
+    ]
+  ],
+  "features": [
+    "url_length",
+    "host_length",
+    "path_length",
+    "query_length",
+    "fragment_length",
+    "dot_count",
+    "hyphen_count",
+    "at_count",
+    "slash_count",
+    "question_count",
+    "equal_count",
+    "ampersand_count",
+    "percent_count",
+    "digit_count",
+    "letter_count",
+    "special_char_count",
+    "subdomain_count",
+    "has_ip",
+    "has_https",
+    "has_at_symbol",
+    "has_double_slash_path",
+    "has_punycode",
+    "suspicious_word_count",
+    "long_host_label",
+    "max_host_label_length"
+  ],
+  "label_mapping": {
+    "0": "legitimate",
+    "1": "phishing"
+  },
+  "random_state": 42
+}

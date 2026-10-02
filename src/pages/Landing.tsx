@@ -2,25 +2,22 @@ import { useNavigate } from "react-router-dom"
 
 function Landing() {
   const navigate = useNavigate()
-
   return (
-    <div style={{ padding: "40px" }}>
-      <h1 style={{ fontSize: "48px" }}>
-        AI Fraud Detection System
-      </h1>
-
-      <p style={{ marginTop: "16px", fontSize: "18px" }}>
-        Detect suspicious transactions using AI in real time
-      </p>
-
-      <button
-        style={{ marginTop: "24px", padding: "10px 20px" }}
-        onClick={() => navigate("/dashboard")}
-      >
-        Go to Dashboard
-      </button>
-    </div>
+    <main className="page hero">
+      <section className="hero-card">
+        <p className="eyebrow">MACHINE LEARNING • CYBERSECURITY</p>
+        <h1>Phishing URL Detection System</h1>
+        <p className="lead">
+          Analyse URL structure with a Random Forest classifier and identify whether a URL is likely legitimate or phishing.
+        </p>
+        <button onClick={() => navigate("/detect")}>Analyse a URL</button>
+        <div className="feature-grid">
+          <div><strong>URL-only features</strong><span>Lexical and structural signals extracted directly from the URL.</span></div>
+          <div><strong>Random Forest</strong><span>Supervised classification with reproducible train/test evaluation.</span></div>
+          <div><strong>Explainable output</strong><span>View the features extracted for every prediction.</span></div>
+        </div>
+      </section>
+    </main>
   )
 }
-
 export default Landing
